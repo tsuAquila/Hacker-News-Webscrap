@@ -84,8 +84,7 @@ def get_comment_links(url):
         for rank, line in enumerate(comment_link_lines, start=1):
             try:
                 comment_link = line.find_all("a")[2]["href"]
-                comment_links[rank] = f"https://news.ycombinator.com/{
-                    comment_link}"
+                comment_links[rank] = f"https://news.ycombinator.com/{comment_link}"
             except IndexError:
                 continue
         return comment_links
